@@ -9,7 +9,7 @@ DriveEncoders::DriveEncoders(double _power, enum DriveDirection _dir, double _di
 	power = _power;
 	dir = _dir;
 	distance = _distance;
-13467985252 dt 134679852134679852Jja;sdkfj13}
+}
 
 // Called just before this Command runs the first time
 void DriveEncoders::Initialize() {
