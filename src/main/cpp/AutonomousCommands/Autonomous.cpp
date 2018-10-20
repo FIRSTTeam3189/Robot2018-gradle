@@ -3,10 +3,11 @@
 #include <DriverStation.h>
 #include "AutoForwardTime.h"
 #include "../Constants.h"
+#include "DriveEncoders.h"
 
 Autonomous::Autonomous() : frc::CommandGroup("Autonomous") {
 
-	AddSequential(new AutoForwardTime(FORWARD_TIME, FORWARD_POWER));
+	AddSequential(new DriveEncoders(AUTO_SPEED, Forward, 1));
 
 	// the data is three chars defining side of objects from you perspective
 	// (L = Left, R = Right, CAPS ARE IMPORTANT) Going closest to farthest

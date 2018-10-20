@@ -20,6 +20,12 @@ void DriveEncoders::Initialize() {
 
 		// Drive the encoders in the proper direction
 		dir = side;
+	} else if (dir == AutoTurnOpposite) {
+		std::string state = DriverStation::GetInstance().GetGameSpecificMessage();
+		DriveDirection side = state[0] == 'L' ? Right : Left;
+
+		// Drive the encoders in the proper direction
+		dir = side;
 	}
 	SetTimeout(1);
 }
@@ -33,7 +39,7 @@ void DriveEncoders::Execute() {
 
 bool DriveEncoders::IsFinished() {
 	auto side = dir == Left ? "Left" : dir == Right ? "Right" : "Forward/Backward";
-	if (fabs(distance)
+	if (distance
 	 <= fabs(drivetrain->GetDistanceInInches())) {  //
 		std::cout << "!!!DriveEnconders going " << side << " for " << distance << " inches has finished!!!\n";
 	} else {

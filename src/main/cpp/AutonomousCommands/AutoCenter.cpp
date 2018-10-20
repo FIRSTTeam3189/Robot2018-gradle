@@ -7,13 +7,14 @@
 #include "Commands/ClawOuttake.h"
 #include "Constants.h"
 #include "DriveEncoders.h"
+
 AutoCenter::AutoCenter() {
 	AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
 	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,12));
 	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,AUTO_DISTANCE_TURN));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,90));
-	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,-AUTO_DISTANCE_TURN));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,90.5));
+	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
+	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,AUTO_DISTANCE_TURN*3-2));
+	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
 	AddSequential(new ClawOuttake());
 /*
 	AddSequential(new GoForwardWithEncoders(12));

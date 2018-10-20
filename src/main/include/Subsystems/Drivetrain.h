@@ -21,7 +21,8 @@ enum DriveDirection{
 	Left,
 	Right,
 	Backward,
-	AutoTurn
+	AutoTurn,
+	AutoTurnOpposite // opposite of AutoTurn
 };
 
 /**
