@@ -33,7 +33,7 @@ void Robot::RobotInit() {
 //	chooser.AddObject("right", new AutoSides());
 	//chooser.AddObject("Forward and stop", new AutoGoForwardAndStop());
 	// chooser.AddObject("My Auto", new MyAutoCommand());
-	frc::SmartDashboard::PutData("Auto Modes", &chooser);
+	SmartDashboard::PutData("Auto Modes", &chooser);
 }
 
 /**
