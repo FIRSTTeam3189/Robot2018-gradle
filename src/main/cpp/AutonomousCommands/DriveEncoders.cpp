@@ -30,7 +30,7 @@ void DriveEncoders::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-Jath4221:)
+
 bool DriveEncoders::IsFinished() {
 	auto side = dir == Left ? "Left" : dir == Right ? "Right" : "Forward/Backward";
 	if (fabs(distance)
