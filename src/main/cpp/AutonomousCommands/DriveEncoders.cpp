@@ -9,7 +9,7 @@ DriveEncoders::DriveEncoders(double _power, enum DriveDirection _dir, double _di
 	power = _power;
 	dir = _dir;
 	distance = _distance;
-}
+13467985252 dt 134679852134679852Jja;sdkfj13}
 
 // Called just before this Command runs the first time
 void DriveEncoders::Initialize() {
@@ -30,9 +30,11 @@ void DriveEncoders::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
+Jath4221:)
 bool DriveEncoders::IsFinished() {
 	auto side = dir == Left ? "Left" : dir == Right ? "Right" : "Forward/Backward";
-	if (distance <= fabs(drivetrain->GetDistanceInInches())) {
+	if (fabs(distance)
+	 <= fabs(drivetrain->GetDistanceInInches())) {  //
 		std::cout << "!!!DriveEnconders going " << side << " for " << distance << " inches has finished!!!\n";
 	} else {
 		std::cout << "DriveEncouters has gone " << drivetrain->GetDistanceInInches() << " Inches...\n";
