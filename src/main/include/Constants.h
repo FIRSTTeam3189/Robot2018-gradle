@@ -66,7 +66,7 @@ constexpr int SIGNALS_PER_REVOLUTION = 2;
 constexpr int ENCODER_TICKS_PER_INCH = 160;
 constexpr double AUTO_SPEED = 0.5;
 
-constexpr double AUTO_DISTANCE_TURN = 12;  // it was 15,  12 makes it turn 90 degrees
+constexpr double AUTO_DISTANCE_TURN = 5;  // it was 15,  12 makes it turn 90 degrees
 constexpr double AUTO_DISTANCE_FORWARD = 126;
 constexpr double AUTO_AFTER_TURN = 2;
 

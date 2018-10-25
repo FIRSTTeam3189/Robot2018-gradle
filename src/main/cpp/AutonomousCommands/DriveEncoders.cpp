@@ -32,7 +32,8 @@ void DriveEncoders::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveEncoders::Execute() {
-	if (IsTimedOut()) drivetrain->DriveEncoders(power, dir);
+	if (distance >= fabs(drivetrain->GetDistanceInInches())) drivetrain->DriveEncoders(power, dir);
+	std::cout << "MOVING" << '\n';
 }
 
 // Make this return true when this Command no longer needs to run execute()

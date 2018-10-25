@@ -10,6 +10,7 @@
 #include "AutonomousCommands/AutoGoForwardAndStop.h"
 #include "AutonomousCommands/AutoCenter.h"
 #include "AutonomousCommands/AutoRight.h"
+#include "AutonomousCommands/AutoTest.h"
 #include "Robot.h"
 #include "CommandBase.h"
 #include "AutonomousCommands/AutoLeft.h"
@@ -30,6 +31,7 @@ void Robot::RobotInit() {
 	chooser.AddObject("center", new AutoCenter());
 	chooser.AddObject("left", new AutoLeft());
 	chooser.AddObject("right",new AutoRight());
+	chooser.AddObject("test", new AutoTest());
 //	chooser.AddObject("right", new AutoSides());
 	//chooser.AddObject("Forward and stop", new AutoGoForwardAndStop());
 	// chooser.AddObject("My Auto", new MyAutoCommand());

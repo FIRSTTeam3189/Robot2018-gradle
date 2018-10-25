@@ -7,6 +7,7 @@
 #include "RobotMap.h"
 #include "Constants.h"
 #include <math.h>
+#include <iostream>
 
 Drivetrain::Drivetrain() :
 	frc::Subsystem("Drivetrain") {
@@ -55,6 +56,10 @@ void Drivetrain::DriveEncoders(double power,enum DriveDirection dir){
 		frontLeft->Set(ControlMode::PercentOutput, power);
 		frontRight->Set(ControlMode::PercentOutput, -power);
 	}
+	std::cout << "\tleft-side encoder pos: " << frontLeft->GetSelectedSensorPosition(0) << '\n';
+	std::cout << "\tright-side encoder pos: " << rearRight->GetSelectedSensorPosition(0) << '\n';
+	std::cout << "---------------------------------------" << '\n';
+
 }
 
 void Drivetrain::Stop(){
