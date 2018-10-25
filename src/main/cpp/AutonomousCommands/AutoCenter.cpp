@@ -13,7 +13,7 @@ AutoCenter::AutoCenter() {
 	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,12));
 	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,AUTO_DISTANCE_TURN));
 	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
-	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,AUTO_DISTANCE_TURN*3-2));
+	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurnOpposite,AUTO_DISTANCE_TURN));
 	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
 	AddSequential(new ClawOuttake());
 /*
