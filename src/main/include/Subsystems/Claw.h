@@ -17,7 +17,6 @@ private:
 	CANTalon* Left;
 	CANTalon* Right;
 	Piston* TheOneTheOnlyThePiston;
-	DigitalInput* limitSwitch;
 //meme
 
 	//"Make the robot do the thing, go" -Alex
@@ -35,8 +34,6 @@ public:
 	void InitHardware();
 	void ClawOpen();
 	void ClawClose();
-	void ClawToggle();
-	bool IsBoxIn();
 };
 
 #endif  // Claw_H

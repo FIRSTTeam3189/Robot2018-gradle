@@ -68,11 +68,6 @@ void Drivetrain::Stop(){
 	Drive(0, 0);
 }
 
-//NOT INMPLEMENTED
-double Drivetrain::GetHeading() {
-	return 0.0;
-}
-
 void Drivetrain::Reset() {
 	frontLeft->SetSelectedSensorPosition(0, 0, 0);
 	rearRight->SetSelectedSensorPosition(0, 0, 0);
@@ -94,18 +89,9 @@ double Drivetrain::GetLeftEncoderDistance(){
 double Drivetrain::GetRightEncoderDistance(){
 	return frontLeft->GetSelectedSensorPosition(0);
 }
-void Drivetrain::EngageWinch(){
-	winchGearboxPiston->Extend();
-	winchShaftPiston->Extend();
-}
 void Drivetrain::EngageDrivetrain(){
 	winchGearboxPiston->Retract();
 	winchShaftPiston->Retract();
-}
-
-double Drivetrain::GetDistanceToObstacle() {
-	// Really meters in simulation since it's a rangefinder...
-	return 0.0;//rangefinder.GetAverageVoltage();
 }
 
 void Drivetrain::InitHardware(){

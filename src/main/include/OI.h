@@ -11,7 +11,6 @@ public:
 	double GetRightY();
 	double GetCoPilotY();
 	bool GetRight1Button();
-	void CheckMath();
 	void InitilizeOI();
 
 

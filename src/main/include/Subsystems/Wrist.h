@@ -36,12 +36,10 @@ public:
 	/*
 	 * Gets the potentiometer value from the wrist.
 	 */
-	double GetWristPot();
 	void InitDefaultCommand();
 	void InitHardware();
 	void PistonThingyExtend();
 	void PistonThingyRetract();
-	void PistonThingyToggle();
 	void UpdateStatus();
 };
 

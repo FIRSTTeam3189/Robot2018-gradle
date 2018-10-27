@@ -9,7 +9,7 @@
 //#include "Commands/ClawClose.h" old
 #include "Commands/WristLift.h"
 #include "Commands/WristLower.h"
-#include "Commands/ArmGoToPoint.h"
+//#include "Commands/ArmGoToPoint.h" old
 #include "Commands/JoystickArmControl.h"
 #include "Commands/TankDriveWithJoystick.h"
 #include <Commands/MoveForward.h>
@@ -86,9 +86,5 @@ void OI::InitilizeOI(){
 }
 bool OI::GetRight1Button(){
 return	left_1->Get();
-}
-
-void OI::CheckMath() {
-	moveArm->WhenPressed(new ArmGoToPoint(15, 50));
 }
 

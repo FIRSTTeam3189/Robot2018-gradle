@@ -59,8 +59,6 @@ public:
 
 	//TODO make this a thing, it should correct driving to preform straight driving.
 	void DriveEncoders(double power, DriveDirection dir);
-	//starts the winch
-	void EngageWinch();
 
 	void EngageDrivetrain();
 	/**
@@ -68,10 +66,6 @@ public:
 	 */
 	void Stop();
 
-	/**
-	 * returns the gyro stuff
-	 */
-	double GetHeading();
 
 	/**
 	 * Reset the robots sensors to the zero states.
@@ -88,11 +82,6 @@ public:
 	double GetRightEncoderDistance();
 
 	double GetLeftEncoderDistance();
-
-	/**
-	 * @return The distance to the obstacle detected by the rangefinder.
-	 */
-	double GetDistanceToObstacle();
 
 	void InitHardware();
 private:

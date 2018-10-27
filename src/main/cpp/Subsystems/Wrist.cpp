@@ -15,9 +15,6 @@ void Wrist::InitDefaultCommand() {
 	//SetDefaultCommand(new WinchJoystickControl());
 }
 
-double Wrist::GetWristPot() {
-	return wristPot->Get();
-}
 
 void Wrist::ControlWrist(double power) {
 	SmartDashboard::PutNumber("Thingy", power);
@@ -40,9 +37,6 @@ void Wrist::PistonThingyRetract(){
 	wristPiston -> Retract();
 }
 
-void Wrist::PistonThingyToggle(){
-	wristPiston -> Toggle();
-}
 
 void Wrist::UpdateStatus(){
 	SmartDashboard::PutBoolean("limit switch", !wristMotor->GetSensorCollection().IsFwdLimitSwitchClosed());
