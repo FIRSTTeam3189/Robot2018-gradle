@@ -1,26 +1,26 @@
-	#include "OI.h"
+#include "OI.h"
 
 #include <SmartDashboard/SmartDashboard.h>
 
 #include <AutonomousCommands/Autonomous.h>
 #include "Commands/ClawIntake.h"
 #include "Commands/ClawOuttake.h"
-#include "Commands/ClawOpen.h"
-#include "Commands/ClawClose.h"
+//#include "Commands/ClawOpen.h" old
+//#include "Commands/ClawClose.h" old
 #include "Commands/WristLift.h"
 #include "Commands/WristLower.h"
 #include "Commands/ArmGoToPoint.h"
 #include "Commands/JoystickArmControl.h"
 #include "Commands/TankDriveWithJoystick.h"
 #include <Commands/MoveForward.h>
-#include "Commands/TRexArmGotoPosition.h"
-#include "Commands/TRexArmGotoPositionLock.h"
+//#include "Commands/TRexArmGotoPosition.h" old
+//#include "Commands/TRexArmGotoPositionLock.h" old
 #include "Commands/ClawIntakeClosed.h"
 #include "Commands/WristJoystickControl.h"
 #include "Constants.h"
 #include "Commands/ShoulderPIDGoto.h"
-#include "Commands/EngageDrivetrain.h"
-#include "Commands/WinchEngage.h"
+//#include "Commands/EngageDrivetrain.h" old
+//#include "Commands/WinchEngage.h" old
 OI::OI() {
 
 }
