@@ -7,7 +7,7 @@
 #include <LiveWindow/LiveWindow.h>
 #include <SmartDashboard/SendableChooser.h>
 #include <SmartDashboard/SmartDashboard.h>
-#include "AutonomousCommands/AutoGoForwardAndStop.h"
+//#include "AutonomousCommands/AutoGoForwardAndStop.h" not used
 #include "AutonomousCommands/AutoCenter.h"
 #include "AutonomousCommands/AutoRight.h"
 #include "AutonomousCommands/AutoTest.h"

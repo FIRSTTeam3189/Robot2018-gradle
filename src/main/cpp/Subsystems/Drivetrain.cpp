@@ -29,6 +29,8 @@ void Drivetrain::Log() {
 	SmartDashboard::PutNumber("Left Speed", frontLeft->GetMotorOutputPercent());
 	SmartDashboard::PutNumber("Right Speed", frontRight->GetMotorOutputPercent());
 	SmartDashboard::PutNumber("encoders", GetDistanceInInches());
+	SmartDashboard::PutNumber("rightEncoder", GetRightEncoderDistance());
+	SmartDashboard::PutNumber("leftEncoder", GetLeftEncoderDistance());
 
 }
 
@@ -85,11 +87,11 @@ double Drivetrain::GetDistanceInInches(){
 	return (fabs(rearRight->GetSelectedSensorPosition(0)) + fabs(frontLeft->GetSelectedSensorPosition(0))) / 2 / ENCODER_TICKS_PER_INCH;
 }
 
-double Drivetrain::GetRightEncoderDistance(){
+double Drivetrain::GetLeftEncoderDistance(){
 	return rearRight->GetSelectedSensorPosition(0);
 }
 
-double Drivetrain::GetLeftEncoderDistance(){
+double Drivetrain::GetRightEncoderDistance(){
 	return frontLeft->GetSelectedSensorPosition(0);
 }
 void Drivetrain::EngageWinch(){

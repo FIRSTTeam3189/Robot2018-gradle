@@ -4,8 +4,8 @@
 #include "Constants.h"
 #include "Commands/ShoulderPIDGoto.h"
 #include "Commands/ClawOuttake.h"
-#include "AutonomousCommands/GoForwardWithEncoders.h"
-#include "AutonomousCommands/AutoEncoderTurn.h"
+//#include "AutonomousCommands/GoForwardWithEncoders.h" not used
+//#include "AutonomousCommands/AutoEncoderTurn.h" not used
 #include "AutonomousCommands/DriveEncoders.h"
 #include "AutoForwardTime.h"
 #include "HaltIfOnWrongSide.h"

@@ -1,8 +1,8 @@
 #include <AutoCenter.h>
 #include <iostream>
 #include <DriverStation.h>
-#include "GoForwardWithEncoders.h"
-#include "AutoEncoderTurn.h"
+//#include "GoForwardWithEncoders.h" not used
+//#include "AutoEncoderTurn.h" not used
 #include "Commands/ShoulderPIDGoto.h"
 #include "Commands/ClawOuttake.h"
 #include "Constants.h"
