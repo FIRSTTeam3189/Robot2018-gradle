@@ -2,6 +2,7 @@
 #include <iostream>
 #include <DriverStation.h>
 #include "GoForwardWithEncoders.h"
+#include "Reset.h"
 #include "AutoEncoderTurn.h"
 #include "Commands/ShoulderPIDGoto.h"
 #include "Commands/ClawOuttake.h"
@@ -9,12 +10,17 @@
 #include "DriveEncoders.h"
 
 AutoCenter::AutoCenter() {
+	AddSequential(new Reset());
 	AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
 	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,12));
+	AddSequential(new WaitCommand(.25));
 	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,AUTO_DISTANCE_TURN));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
+	AddSequential(new WaitCommand(.25));
+	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,15));
+	AddSequential(new WaitCommand(.25));
 	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurnOpposite,AUTO_DISTANCE_TURN));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
+	AddSequential(new WaitCommand(.25));
+	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,65));
 	AddSequential(new ClawOuttake());
 /*
 	AddSequential(new GoForwardWithEncoders(12));

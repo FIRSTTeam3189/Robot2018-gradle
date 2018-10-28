@@ -27,12 +27,12 @@ void DriveEncoders::Initialize() {
 		// Drive the encoders in the proper direction
 		dir = side;
 	}
-	SetTimeout(1);
+	SetTimeout(2);
 }
 
 // Called repeatedly when this Command is scheduled to run
 void DriveEncoders::Execute() {
-	if (distance >= fabs(drivetrain->GetDistanceInInches())) drivetrain->DriveEncoders(power, dir);
+	if (distance >= drivetrain->GetDistanceInInches()) drivetrain->DriveEncoders(power, dir);
 	std::cout << "MOVING" << '\n';
 }
 
@@ -47,16 +47,18 @@ bool DriveEncoders::IsFinished() {
 		std::cout << "DriveEncouters has gone " << drivetrain->GetDistanceInInches() << " Inches...\n";
 	}
 
-	return IsTimedOut() && distance <= fabs(drivetrain->GetDistanceInInches());// ? true : false;
+	return IsTimedOut() || distance <= fabs(drivetrain->GetDistanceInInches());// ? true : false;
 }
 
 // Called once after isFinished returns true
 void DriveEncoders::End() {
 	drivetrain->Drive(0);
+	drivetrain->Reset();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void DriveEncoders::Interrupted() {
 	drivetrain->Drive(0);
+	drivetrain->Reset();
 }

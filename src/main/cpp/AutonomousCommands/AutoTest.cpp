@@ -8,6 +8,6 @@
 
 AutoTest::AutoTest() {
     AddSequential(new DriveEncoders(AUTO_SPEED, AutoTurnOpposite, AUTO_DISTANCE_TURN));
-    AddSequential(new DriveEncoders(AUTO_SPEED, AutoTurnOpposite, AUTO_DISTANCE_TURN));
+    AddSequential(new DriveEncoders(AUTO_SPEED, AutoTurn, AUTO_DISTANCE_TURN));
 
 }
