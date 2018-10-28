@@ -7,18 +7,20 @@
 //#include "AutonomousCommands/GoForwardWithEncoders.h" not used
 //#include "AutonomousCommands/AutoEncoderTurn.h" not used
 #include "AutonomousCommands/DriveEncoders.h"
-#include "AutoForwardTime.h"
+#include "AutoForwardTime.h"	
 #include "HaltIfOnWrongSide.h"
+#include "Reset.h"
 /**
  * I know we were going to do some stuff combining left and right and
  * clever logic, but it's competition and I don't want to mess with choosers.
  * -Nate
  */
 AutoLeft::AutoLeft() {
+			AddSequential(new Reset());	
 			AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
 			AddSequential(new DriveEncoders(AUTO_SPEED,Forward,AUTO_DISTANCE_FORWARD));
 			AddSequential(new HaltIfOnWrongSide('L'));
-			AddSequential(new DriveEncoders(AUTO_SPEED,Right,AUTO_DISTANCE_TURN));
+		//	AddSequential(new DriveEncoders(AUTO_SPEED,Right,AUTO_DISTANCE_TURN));
 			AddSequential(new AutoForwardTime(AUTO_SPEED, 1));
 			AddSequential(new WaitCommand(1));
 			AddSequential(new ClawOuttake());

@@ -7,7 +7,7 @@
 
 Autonomous::Autonomous() : frc::CommandGroup("Autonomous") {
 
-	AddSequential(new DriveEncoders(AUTO_SPEED, Forward, 1));
+	AddSequential(new DriveEncoders(AUTO_SPEED, Forward, AUTO_DISTANCE_FORWARD));
 
 	// the data is three chars defining side of objects from you perspective
 	// (L = Left, R = Right, CAPS ARE IMPORTANT) Going closest to farthest

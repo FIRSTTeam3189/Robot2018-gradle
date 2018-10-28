@@ -26,7 +26,7 @@ constexpr int WRIST_POT_MIN = 0;
 constexpr int WRIST_POT_MAX = 0;
 
 constexpr int TREX_ARM_START = 30;
-constexpr int TREX_ARM_HIGH = 100;
+constexpr int TREX_ARM_HIGH = 90;
 constexpr int TREX_ARM_MIDDLE = 120;
 constexpr int TREX_ARM_LOW = 150;
 
@@ -59,14 +59,14 @@ constexpr double ARM_ANGLE_RANGE = 0.052;
 constexpr double ARM_SWITCH = 15;
 
 constexpr double CLAW_INTAKE_POWER = 0.275;
-constexpr double CLAW_OUTAKE_POWER = -0.75;
+constexpr double CLAW_OUTAKE_POWER = -0.55;
 
 constexpr double WHEEL_CIRCUMFERENCE= 0;
 constexpr int SIGNALS_PER_REVOLUTION = 2;
 constexpr int ENCODER_TICKS_PER_INCH = 160;
-constexpr double AUTO_SPEED = 0.5;
+constexpr double AUTO_SPEED = 0.4;
 
-constexpr double AUTO_DISTANCE_TURN = 5;  // it was 15,  12 makes it turn 90 degrees
+constexpr double AUTO_DISTANCE_TURN = 12;  // it was 15,  12 makes it turn 90 degrees 5
 constexpr double AUTO_DISTANCE_FORWARD = 126;
 constexpr double AUTO_AFTER_TURN = 2;
 

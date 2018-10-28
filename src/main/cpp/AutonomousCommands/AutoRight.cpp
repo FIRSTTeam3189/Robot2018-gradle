@@ -9,12 +9,13 @@
 #include "AutoForwardTime.h"
 #include "DriveEncoders.h"
 #include "HaltIfOnWrongSide.h"
+#include "Reset.h"
 AutoRight::AutoRight() {
-
+		AddSequential(new Reset());
 		AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
 		AddSequential(new DriveEncoders(AUTO_SPEED,Forward,AUTO_DISTANCE_FORWARD));
 		AddSequential(new HaltIfOnWrongSide('R'));
-		AddSequential(new DriveEncoders(AUTO_SPEED,Left,AUTO_DISTANCE_TURN));
+	//	AddSequential(new DriveEncoders(AUTO_SPEED,Left,AUTO_DISTANCE_TURN));
 		AddSequential(new AutoForwardTime(AUTO_SPEED, 1));
 		AddSequential(new WaitCommand(1));
 		AddSequential(new ClawOuttake());
