@@ -16,7 +16,7 @@
 using CANTalon = ctre::phoenix::motorcontrol::can::TalonSRX;
 using ControlMode = ctre::phoenix::motorcontrol::ControlMode;
 
-enum DriveDirection{
+enum class DriveDirection{
 	Forward,
 	Left,
 	Right,

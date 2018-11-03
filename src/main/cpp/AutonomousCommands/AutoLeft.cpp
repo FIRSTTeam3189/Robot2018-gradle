@@ -7,7 +7,7 @@
 //#include "AutonomousCommands/GoForwardWithEncoders.h" not used
 //#include "AutonomousCommands/AutoEncoderTurn.h" not used
 #include "AutonomousCommands/DriveEncoders.h"
-#include "AutoForwardTime.h"	
+#include "AutoForwardTime.h"
 #include "HaltIfOnWrongSide.h"
 #include "Reset.h"
 /**
@@ -16,9 +16,9 @@
  * -Nate
  */
 AutoLeft::AutoLeft() {
-			AddSequential(new Reset());	
+			AddSequential(new Reset());
 			AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
-			AddSequential(new DriveEncoders(AUTO_SPEED,Forward,AUTO_DISTANCE_FORWARD));
+			AddSequential(new DriveEncoders(AUTO_SPEED,DriveDirection::Forward,AUTO_DISTANCE_FORWARD));
 			AddSequential(new HaltIfOnWrongSide('L'));
 		//	AddSequential(new DriveEncoders(AUTO_SPEED,Right,AUTO_DISTANCE_TURN));
 			AddSequential(new AutoForwardTime(AUTO_SPEED, 1));

@@ -10,11 +10,11 @@
 
 AutoCenter::AutoCenter() {
 	AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,12));
-	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurn,AUTO_DISTANCE_TURN));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
-	AddSequential(new DriveEncoders(AUTO_SPEED,AutoTurnOpposite,AUTO_DISTANCE_TURN));
-	AddSequential(new DriveEncoders(AUTO_SPEED,Forward,45));
+	AddSequential(new DriveEncoders(AUTO_SPEED,DriveDirection::Forward,12));
+	AddSequential(new DriveEncoders(AUTO_SPEED,DriveDirection::AutoTurn,AUTO_DISTANCE_TURN));
+	AddSequential(new DriveEncoders(AUTO_SPEED,DriveDirection::Forward,45));
+	AddSequential(new DriveEncoders(AUTO_SPEED,DriveDirection::AutoTurnOpposite,AUTO_DISTANCE_TURN));
+	AddSequential(new DriveEncoders(AUTO_SPEED,DriveDirection::Forward,45));
 	AddSequential(new ClawOuttake());
 /*
 	AddSequential(new GoForwardWithEncoders(12));

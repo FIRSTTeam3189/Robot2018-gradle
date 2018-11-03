@@ -44,17 +44,17 @@ void Drivetrain::Drive(double left, double right) {
 	frontRight->Set(ControlMode::PercentOutput, right);
 }
 
-void Drivetrain::DriveEncoders(double power,enum DriveDirection dir){
-	if(dir == Forward){
+void Drivetrain::DriveEncoders(double power, DriveDirection dir){
+	if(dir == DriveDirection::Forward){
 		frontLeft->Set(ControlMode::PercentOutput, power);
 		frontRight->Set(ControlMode::PercentOutput, power);
-	} else if(dir == Backward){
+	} else if(dir == DriveDirection::Backward){
 		frontLeft->Set(ControlMode::PercentOutput,-power);
 		frontRight->Set(ControlMode::PercentOutput,-power);
-	} else if(dir == Left){
+	} else if(dir == DriveDirection::Left){
 		frontLeft->Set(ControlMode::PercentOutput, -power);
 		frontRight->Set(ControlMode::PercentOutput, power);
-	} else if(dir == Right){
+	} else if(dir == DriveDirection::Right){
 		frontLeft->Set(ControlMode::PercentOutput, power);
 		frontRight->Set(ControlMode::PercentOutput, -power);
 	}
