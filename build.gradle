@@ -39,18 +39,18 @@ model {
 
             sources.cpp {
                 source {
-                    srcDir 'src/main/cpp'
-                    srcDir 'src/main/cpp/AutonomousCommands'
-                    srcDir 'src/main/cpp/Commands'
-                    srcDir 'src/main/cpp/Subsystems'
-                    srcDir 'src/main/cpp/Utils'
+                    srcDir 'src/cpp'
+                    srcDir 'src/cpp/AutonomousCommands'
+                    srcDir 'src/cpp/Commands'
+                    srcDir 'src/cpp/Subsystems'
+                    srcDir 'src/cpp/Utils'
                 }
                 exportedHeaders {
-                    srcDir 'src/main/include/'
-                    srcDir 'src/main/include/AutonomousCommands'
-                    srcDir 'src/main/include/Commands'
-                    srcDir 'src/main/include/Subsystems'
-                    srcDir 'src/main/include/Utils'
+                    srcDir 'src/include/'
+                    srcDir 'src/include/AutonomousCommands'
+                    srcDir 'src/include/Commands'
+                    srcDir 'src/include/Subsystems'
+                    srcDir 'src/include/Utils'
                 }
             }
 
