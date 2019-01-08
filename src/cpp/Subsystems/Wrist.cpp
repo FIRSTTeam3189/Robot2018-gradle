@@ -1,4 +1,4 @@
-#include "Wrist.h"
+#include "Subsystems/Wrist.h"
 #include "RobotMap.h"
 #include "Constants.h"
 #include "RobotMap.h"
@@ -17,7 +17,7 @@ void Wrist::InitDefaultCommand() {
 
 
 void Wrist::ControlWrist(double power) {
-	SmartDashboard::PutNumber("Thingy", power);
+	frc::SmartDashboard::PutNumber("Thingy", power);
 	if(!wristMotor->GetSensorCollection().IsFwdLimitSwitchClosed() || power > 0){
 		wristMotor->Set(ControlMode::PercentOutput, power);
 	}else{
@@ -39,5 +39,5 @@ void Wrist::PistonThingyRetract(){
 
 
 void Wrist::UpdateStatus(){
-	SmartDashboard::PutBoolean("limit switch", !wristMotor->GetSensorCollection().IsFwdLimitSwitchClosed());
+	frc::SmartDashboard::PutBoolean("limit switch", !wristMotor->GetSensorCollection().IsFwdLimitSwitchClosed());
 }
