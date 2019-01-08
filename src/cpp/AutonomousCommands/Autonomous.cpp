@@ -2,8 +2,8 @@
 #include <iostream>
 #include <DriverStation.h>
 //#include "AutoForwardTime.h"   not used
-#include "../Constants.h"
-#include "DriveEncoders.h"
+#include "Constants.h"
+#include "AutonomousCommands/DriveEncoders.h"
 
 Autonomous::Autonomous() : frc::CommandGroup("Autonomous") {
 

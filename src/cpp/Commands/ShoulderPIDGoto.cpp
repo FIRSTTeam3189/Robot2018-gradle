@@ -1,4 +1,4 @@
-#include "ShoulderPIDGoto.h"
+#include "Commands/ShoulderPIDGoto.h"
 
 ShoulderPIDGoto::ShoulderPIDGoto(double amount) {
 	Requires(arm.get());

@@ -1,4 +1,4 @@
-#include "ArmStop.h"
+#include "Commands/ArmStop.h"
 
 ArmStop::ArmStop() {
 	Requires(arm.get());

@@ -7,9 +7,9 @@
 //#include "AutonomousCommands/GoForwardWithEncoders.h" not used
 //#include "AutonomousCommands/AutoEncoderTurn.h" not used
 #include "AutonomousCommands/DriveEncoders.h"
-#include "AutoForwardTime.h"
-#include "HaltIfOnWrongSide.h"
-#include "Reset.h"
+#include "AutonomousCommands/AutoForwardTime.h"
+#include "AutonomousCommands/HaltIfOnWrongSide.h"
+#include "AutonomousCommands/Reset.h"
 /**
  * I know we were going to do some stuff combining left and right and
  * clever logic, but it's competition and I don't want to mess with choosers.
@@ -22,7 +22,7 @@ AutoLeft::AutoLeft() {
 			AddSequential(new HaltIfOnWrongSide('L'));
 		//	AddSequential(new DriveEncoders(AUTO_SPEED,Right,AUTO_DISTANCE_TURN));
 			AddSequential(new AutoForwardTime(AUTO_SPEED, 1));
-			AddSequential(new WaitCommand(1));
+			AddSequential(new frc::WaitCommand(1));
 			AddSequential(new ClawOuttake());
 
 

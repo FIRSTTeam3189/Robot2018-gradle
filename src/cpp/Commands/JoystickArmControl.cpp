@@ -1,4 +1,4 @@
-#include "JoystickArmControl.h"
+#include "Commands/JoystickArmControl.h"
 
 JoystickArmControl::JoystickArmControl() {
 	// Use Requires() here to declare subsystem dependencies

@@ -1,12 +1,10 @@
-#include <AutoCenter.h>
+#include <AutonomousCommands/AutoCenter.h>
 #include <iostream>
 #include <DriverStation.h>
-//#include "GoForwardWithEncoders.h" not used
-//#include "AutoEncoderTurn.h" not used
 #include "Commands/ShoulderPIDGoto.h"
 #include "Commands/ClawOuttake.h"
 #include "Constants.h"
-#include "DriveEncoders.h"
+#include "AutonomousCommands/DriveEncoders.h"
 
 AutoCenter::AutoCenter() {
 	AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));

@@ -6,10 +6,10 @@
 #include "Commands/ClawOuttake.h"
 //#include "AutonomousCommands/GoForwardWithEncoders.h" not used
 //#include "AutonomousCommands/AutoEncoderTurn.h" not used
-#include "AutoForwardTime.h"
-#include "DriveEncoders.h"
-#include "HaltIfOnWrongSide.h"
-#include "Reset.h"
+#include "AutonomousCommands/AutoForwardTime.h"
+#include "AutonomousCommands/DriveEncoders.h"
+#include "AutonomousCommands/HaltIfOnWrongSide.h"
+#include "AutonomousCommands/Reset.h"
 AutoRight::AutoRight() {
 		AddSequential(new Reset());
 		AddParallel(new ShoulderPIDGoto(TREX_ARM_HIGH));
@@ -17,7 +17,7 @@ AutoRight::AutoRight() {
 		AddSequential(new HaltIfOnWrongSide('R'));
 	//	AddSequential(new DriveEncoders(AUTO_SPEED,Left,AUTO_DISTANCE_TURN));
 		AddSequential(new AutoForwardTime(AUTO_SPEED, 1));
-		AddSequential(new WaitCommand(1));
+		AddSequential(new frc::WaitCommand(1));
 		AddSequential(new ClawOuttake());
 
 

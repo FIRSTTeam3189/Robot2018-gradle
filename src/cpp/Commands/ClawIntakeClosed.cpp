@@ -1,4 +1,4 @@
-#include "ClawIntakeClosed.h"
+#include "Commands/ClawIntakeClosed.h"
 #include "Constants.h"
 
 ClawIntakeClosed::ClawIntakeClosed() {

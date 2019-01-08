@@ -5,18 +5,18 @@
  *      Author: not dev
  */
 
-#include "Piston.h"
+#include "Utils/Piston.h"
 
 PistonDouble::PistonDouble(int extendID, int retractID, int deviceID, bool extended) {
-	this->extended = new Solenoid(deviceID, extendID);
-	this->retracted = new Solenoid(deviceID, retractID);
+	this->extended = new frc::Solenoid(deviceID, extendID);
+	this->retracted = new frc::Solenoid(deviceID, retractID);
 	this->extended->Set(extended);
 	this->retracted->Set(!extended);
 }
 
 PistonDouble::PistonDouble(PistonData init) {
-	this->extended = new Solenoid(init.deviceID, init.extendID);
-	this->retracted = new Solenoid(init.deviceID, init.retractID);
+	this->extended = new frc::Solenoid(init.deviceID, init.extendID);
+	this->retracted = new frc::Solenoid(init.deviceID, init.retractID);
 	this->extended->Set(init.extendedByDefault);
 	this->retracted->Set(!init.extendedByDefault);
 }
@@ -38,12 +38,12 @@ void PistonDouble::Toggle() {
 }
 
 PistonSingle::PistonSingle(int extendID, int deviceID, bool extended) {
-	this->extended = new Solenoid(deviceID, extendID);
+	this->extended = new frc::Solenoid(deviceID, extendID);
 	this->extended->Set(extended);
 }
 
 PistonSingle::PistonSingle(PistonData init) {
-	this->extended = new Solenoid(init.deviceID, init.extendID);
+	this->extended = new frc::Solenoid(init.deviceID, init.extendID);
 	this->extended->Set(init.extendedByDefault);
 }
 

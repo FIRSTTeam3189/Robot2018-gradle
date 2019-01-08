@@ -1,4 +1,4 @@
-#include "TankDriveWithJoystick.h"
+#include "Commands/TankDriveWithJoystick.h"
 
 TankDriveWithJoystick::TankDriveWithJoystick() :
 		CommandBase("TankDriveWithJoystick") {
