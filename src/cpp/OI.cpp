@@ -41,25 +41,25 @@ double OI::GetCoPilotY() {
 
 
 void OI::InitilizeOI(){
-	copilot_2 = new JoystickButton(&copilot, 2);
-	copilot_3 = new JoystickButton(&copilot, 3);
-	copilot_1 = new JoystickButton(&copilot, 1);
-	copilot_4 = new JoystickButton(&copilot, 4);
-	copilot_5 = new JoystickButton(&copilot, 5);
-	copilot_6 = new JoystickButton(&copilot, 6);
-	copilot_7 = new JoystickButton(&copilot, 7);
-	copilot_8 = new JoystickButton(&copilot, 8);
-	copilot_9 = new JoystickButton(&copilot, 9);
-	copilot_10 = new JoystickButton(&copilot, 10);
-	copilot_11 = new JoystickButton(&copilot, 11);
-	left_1 = new JoystickButton(&left, 1);
-	right_1 = new JoystickButton(&right, 1);
-	right_2 = new JoystickButton(&right, 2);
-	right_3 = new JoystickButton(&right, 3);
-	right_7 = new JoystickButton(&right, 7);
-	right_8 = new JoystickButton(&right, 8);
-	right_9 = new JoystickButton(&right, 9);
-	right_10 = new JoystickButton(&right, 10);
+	copilot_2 = new frc::JoystickButton(&copilot, 2);
+	copilot_3 = new frc::JoystickButton(&copilot, 3);
+	copilot_1 = new frc::JoystickButton(&copilot, 1);
+	copilot_4 = new frc::JoystickButton(&copilot, 4);
+	copilot_5 = new frc::JoystickButton(&copilot, 5);
+	copilot_6 = new frc::JoystickButton(&copilot, 6);
+	copilot_7 = new frc::JoystickButton(&copilot, 7);
+	copilot_8 = new frc::JoystickButton(&copilot, 8);
+	copilot_9 = new frc::JoystickButton(&copilot, 9);
+	copilot_10 = new frc::JoystickButton(&copilot, 10);
+	copilot_11 = new frc::JoystickButton(&copilot, 11);
+	left_1 = new frc::JoystickButton(&left, 1);
+	right_1 = new frc::JoystickButton(&right, 1);
+	right_2 = new frc::JoystickButton(&right, 2);
+	right_3 = new frc::JoystickButton(&right, 3);
+	right_7 = new frc::JoystickButton(&right, 7);
+	right_8 = new frc::JoystickButton(&right, 8);
+	right_9 = new frc::JoystickButton(&right, 9);
+	right_10 = new frc::JoystickButton(&right, 10);
 
 
 

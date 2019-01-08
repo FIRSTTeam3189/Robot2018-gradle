@@ -21,7 +21,7 @@ struct PistonData{
 
 class Piston {
 protected:
-	Solenoid* extended;
+	frc::Solenoid* extended;
 public:
 
 	/**
@@ -63,7 +63,7 @@ public:
 
 class PistonDouble: public Piston {
 protected:
-	Solenoid* retracted;
+	frc::Solenoid* retracted;
 public:
 	/**
 	 * Provides interface for Pistons

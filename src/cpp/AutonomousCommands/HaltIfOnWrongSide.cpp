@@ -9,7 +9,7 @@ HaltIfOnWrongSide::HaltIfOnWrongSide(char side_) {
 
 // Called just before this Command runs the first time
 void HaltIfOnWrongSide::Initialize() {
-	std::string state = DriverStation::GetInstance().GetGameSpecificMessage();
+	std::string state = frc::DriverStation::GetInstance().GetGameSpecificMessage();
 	willFinish = state[0] == side;
 	std::cout << "_____________________" << willFinish << "______" << state[0] << std::endl;
 }

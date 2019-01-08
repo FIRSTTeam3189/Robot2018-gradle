@@ -14,18 +14,14 @@
 #include "Robot.h"
 #include "CommandBase.h"
 #include "AutonomousCommands/AutoLeft.h"
+#include "SmartDashboard/SmartDashboard.h"
+
 void Robot::RobotInit() {
 	CommandBase::drivetrain->InitHardware();
 	CommandBase::arm->InitHardware();
 	CommandBase::claw->InitHardware();
 	CommandBase::wrist->InitHardware();
 	CommandBase::oi->InitilizeOI();
-
-	c = new Compressor(0);
-
-	c->SetClosedLoopControl(true);
-
-	CameraServer::GetInstance()->StartAutomaticCapture(0);
 
 	chooser.AddDefault("Default Auto", new Autonomous());
 	chooser.AddObject("center", new AutoCenter());
@@ -35,7 +31,7 @@ void Robot::RobotInit() {
 //	chooser.AddObject("right", new AutoSides());
 	//chooser.AddObject("Forward and stop", new AutoGoForwardAndStop());
 	// chooser.AddObject("My Auto", new MyAutoCommand());
-	SmartDashboard::PutData("Auto Modes", &chooser);
+	frc::SmartDashboard::PutData("Auto Modes", &chooser);
 }
 
 /**
@@ -108,7 +104,7 @@ void Robot::TestPeriodic() {
 
 void Robot::UpdateStatus(){
 	CommandBase::arm->UpdateStatus();
-	SmartDashboard::PutData("claw", CommandBase::arm.get());
+	frc::SmartDashboard::PutData("claw", CommandBase::arm.get());
 	CommandBase::wrist->UpdateStatus();
 }
 

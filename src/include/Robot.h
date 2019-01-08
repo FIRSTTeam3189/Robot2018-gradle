@@ -13,7 +13,6 @@
 
 #include "OI.h"
 #include "Subsystems/Drivetrain.h"
-#include "Compressor.h"
 
 class Robot: public frc::IterativeRobot {
 public:
@@ -54,7 +53,6 @@ public:
 private:
 	std::unique_ptr<frc::Command> autonomousCommand;
 	frc::SendableChooser<frc::Command*> chooser;
-	Compressor* c;
 
 };
 

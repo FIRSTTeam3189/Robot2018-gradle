@@ -1,6 +1,6 @@
 #include "Subsystems/Arm.h"
 #include "Constants.h"
-#include "../RobotMap.h"
+#include "RobotMap.h"
 #include <math.h>
 #include <iostream>
 #include <algorithm>
@@ -66,9 +66,9 @@ void Arm::InitHardware() {
 
 void Arm::UpdateStatus(){
 	//SmartDashboard::PutNumber("Elbow", elbowPot->Get());
-	SmartDashboard::PutNumber("Shoulder" , GetShoulderPot());
+	frc::SmartDashboard::PutNumber("Shoulder" , GetShoulderPot());
 	//SmartDashboard::PutNumber("Elbow Power", elbowMotor->GetMotorOutputPercent());
-	SmartDashboard::PutNumber("Shoulder Power", shoulderMotor->GetMotorOutputPercent());
+	frc::SmartDashboard::PutNumber("Shoulder Power", shoulderMotor->GetMotorOutputPercent());
 }
 
 
@@ -90,7 +90,7 @@ void Arm::UsePIDOutput(double output) {
 		output *= .4;
 	}
 		shoulderMotor->Set(ControlMode::PercentOutput, -output * ARM_SPEED_LIMMIT);
-		SmartDashboard::PutNumber("PIDOutput", -output);
+		frc::SmartDashboard::PutNumber("PIDOutput", -output);
 	//}
 
 }

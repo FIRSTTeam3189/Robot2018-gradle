@@ -15,13 +15,13 @@ DriveTimed::DriveTimed(double _power, DriveDirection _dir, double _time) {
 void DriveTimed::Initialize() {
 	drivetrain->Reset();
 	if (dir == DriveDirection::AutoTurn) {
-		std::string state = DriverStation::GetInstance().GetGameSpecificMessage();
+		std::string state = frc::DriverStation::GetInstance().GetGameSpecificMessage();
 		DriveDirection side = state[0] == 'L' ? DriveDirection::Left : DriveDirection::Right;
 
 		// Drive the encoders in the proper direction
 		dir = side;
 	} else if (dir == DriveDirection::AutoTurnOpposite) {
-		std::string state = DriverStation::GetInstance().GetGameSpecificMessage();
+		std::string state = frc::DriverStation::GetInstance().GetGameSpecificMessage();
 		DriveDirection side = state[0] == 'L' ? DriveDirection::Right : DriveDirection::Left;
 
 		// Drive the encoders in the proper direction

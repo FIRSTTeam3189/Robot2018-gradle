@@ -7,8 +7,7 @@
 #include <Commands/Subsystem.h>
 #include <Encoder.h>
 #include <RobotDrive.h>
-#include <ctre/phoenix/MotorControl/CAN/TalonSRX.h>
-#include <ctre/phoenix/MotorControl/ControlMode.h>
+#include <ctre/Phoenix.h>
 #include "RobotMap.h"
 #include "Utils/Piston.h"
 

@@ -3,8 +3,7 @@
 //#define ONE_PORT
 
 #include <Commands/PIDSubsystem.h>
-#include <ctre/phoenix/MotorControl/CAN/TalonSRX.h>
-#include <ctre/phoenix/MotorControl/ControlMode.h>
+#include <ctre/Phoenix.h>
 #include <SmartDashboard/SmartDashboard.h>
 #include <AnalogPotentiometer.h>
 #include <AnalogInput.h>
@@ -16,9 +15,9 @@
 
 using CANTalon = ctre::phoenix::motorcontrol::can::TalonSRX;
 using ControlMode = ctre::phoenix::motorcontrol::ControlMode;
-using Pot = AnalogPotentiometer;
+using Pot = frc::AnalogPotentiometer;
 
-class Arm: public PIDSubsystem {
+class Arm: public frc::PIDSubsystem {
 private:
 	CANTalon* shoulderMotor;
 	//CANTalon* shoulderMotor2;

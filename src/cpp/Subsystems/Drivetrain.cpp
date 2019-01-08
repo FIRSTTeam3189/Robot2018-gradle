@@ -2,7 +2,7 @@
 #include <LiveWindow/LiveWindow.h>
 #include <Subsystems/Drivetrain.h>
 #include <SmartDashboard/SmartDashboard.h>
-#include "ctre/phoenix/MotorControl/FeedbackDevice.h"
+#include "ctre/Phoenix.h"
 #include "Commands/TankDriveWithJoystick.h"
 #include "RobotMap.h"
 #include "Constants.h"
@@ -26,11 +26,11 @@ void Drivetrain::InitDefaultCommand() {
  * The log method puts interesting information to the SmartDashboard
  */
 void Drivetrain::Log() {
-	SmartDashboard::PutNumber("Left Speed", frontLeft->GetMotorOutputPercent());
-	SmartDashboard::PutNumber("Right Speed", frontRight->GetMotorOutputPercent());
-	SmartDashboard::PutNumber("encoders", GetDistanceInInches());
-	SmartDashboard::PutNumber("rightEncoder", GetRightEncoderDistance());
-	SmartDashboard::PutNumber("leftEncoder", GetLeftEncoderDistance());
+	frc::SmartDashboard::PutNumber("Left Speed", frontLeft->GetMotorOutputPercent());
+	frc::SmartDashboard::PutNumber("Right Speed", frontRight->GetMotorOutputPercent());
+	frc::SmartDashboard::PutNumber("encoders", GetDistanceInInches());
+	frc::SmartDashboard::PutNumber("rightEncoder", GetRightEncoderDistance());
+	frc::SmartDashboard::PutNumber("leftEncoder", GetLeftEncoderDistance());
 
 }
 

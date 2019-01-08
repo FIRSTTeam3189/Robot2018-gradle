@@ -1,4 +1,4 @@
-#include "WristLift.h"
+#include "Commands/WristLift.h"
 
 WristLift::WristLift() {
 	Requires(CommandBase::wrist.get());

@@ -1,11 +1,11 @@
 #include "Wrist.h"
-#include "../RobotMap.h"
+#include "RobotMap.h"
 #include "Constants.h"
-#include "../RobotMap.h"
+#include "RobotMap.h"
 #include "Commands/WristJoystickControl.h"
 #include <math.h>
 #include <SmartDashboard/SmartDashboard.h>
-#include "ctre/phoenix/MotorControl/SensorCollection.h"
+#include "ctre/Phoenix.h"
 
 Wrist::Wrist() : Subsystem("wrist") {
 
