@@ -3,13 +3,13 @@
 #include <AutonomousCommands/Autonomous.h>
 #include <memory>
 
-#include <frc/Commands/Command.h>
-#include <frc/Commands/Scheduler.h>
+#include <frc/commands/Command.h>
+#include <frc/commands/Scheduler.h>
 #include <frc/IterativeRobot.h>
-#include <frc/LiveWindow/LiveWindow.h>
-#include <frc/SmartDashboard/SendableChooser.h>
-#include <frc/SmartDashboard/SmartDashboard.h>
-#include <frc/CameraServer.h>
+#include <frc/livewindow/LiveWindow.h>
+#include <frc/smartdashboard/SendableChooser.h>
+#include <frc/smartdashboard/SmartDashboard.h>
+#include <cameraserver/CameraServer.h>
 
 #include "OI.h"
 #include "Subsystems/Drivetrain.h"

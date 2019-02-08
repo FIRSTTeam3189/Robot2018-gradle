@@ -1,7 +1,7 @@
 #ifndef AutoLeft_H
 #define AutoLeft_H
 
-#include <frc/Commands/CommandGroup.h>
+#include <frc/commands/CommandGroup.h>
 
 class AutoLeft : public frc::CommandGroup {
 public:

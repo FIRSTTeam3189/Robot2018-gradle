@@ -1,7 +1,7 @@
 #ifndef Claw_H
 #define Claw_H
 
-#include <frc/Commands/Subsystem.h>
+#include <frc/commands/Subsystem.h>
 #include"Utils/Piston.h"
 #include <ctre/Phoenix.h>
 #include <frc/DigitalInput.h>

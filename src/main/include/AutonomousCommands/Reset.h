@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <frc/Commands/Command.h>
+#include <frc/commands/Command.h>
 
 class Reset : public frc::Command {
  public:

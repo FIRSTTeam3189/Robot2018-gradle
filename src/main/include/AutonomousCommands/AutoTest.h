@@ -1,7 +1,7 @@
 #ifndef AutoTest_H
 #define AutoTest_H
 
-#include <frc/Commands/CommandGroup.h>
+#include <frc/commands/CommandGroup.h>
 
 class AutoTest : public frc::CommandGroup {
 public:

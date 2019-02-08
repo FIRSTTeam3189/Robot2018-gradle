@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-#include <frc/Commands/Command.h>
+#include <frc/commands/Command.h>
 
 #include "OI.h"
 #include "Subsystems/Drivetrain.h"

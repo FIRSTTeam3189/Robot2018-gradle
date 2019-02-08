@@ -1,7 +1,7 @@
 #ifndef OI_H_
 #define OI_H_
 
-#include <frc/Buttons/JoystickButton.h>
+#include <frc/buttons/JoystickButton.h>
 #include <frc/Joystick.h>
 
 class OI {

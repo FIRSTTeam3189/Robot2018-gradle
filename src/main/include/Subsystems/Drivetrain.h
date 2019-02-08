@@ -4,7 +4,7 @@
 #include <frc/AnalogGyro.h>
 #include <frc/AnalogInput.h>
 #include <frc/AnalogPotentiometer.h>
-#include <frc/Commands/Subsystem.h>
+#include <frc/commands/Subsystem.h>
 #include <frc/Encoder.h>
 #include <frc/RobotDrive.h>
 #include <ctre/Phoenix.h>

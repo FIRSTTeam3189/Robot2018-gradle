@@ -2,9 +2,9 @@
 #define Arm_H
 //#define ONE_PORT
 
-#include <frc/Commands/PIDSubsystem.h>
+#include <frc/commands/Subsystem.h>
 #include <ctre/Phoenix.h>
-#include <frc/SmartDashboard/SmartDashboard.h>
+#include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/AnalogPotentiometer.h>
 #include <frc/AnalogInput.h>
 #include <deque>
