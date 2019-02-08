@@ -1,10 +1,10 @@
 #ifndef Wrist_H
 #define Wrist_H
 
-#include <Commands/Subsystem.h>
+#include <frc/Commands/Subsystem.h>
 #include <ctre/Phoenix.h>
-#include <SmartDashboard/SmartDashboard.h>
-#include <AnalogPotentiometer.h>
+#include <frc/SmartDashboard/SmartDashboard.h>
+#include <frc/AnalogPotentiometer.h>
 #include "RobotMap.h"
 #include "Utils/Piston.h"
 

@@ -1,7 +1,7 @@
 plugins {
     id "cpp"
     id "google-test-test-suite"
-    id "edu.wpi.first.GradleRIO" version "2019.1.1"
+    id "edu.wpi.first.GradleRIO" version "2019.2.1"
 }
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
@@ -26,7 +26,7 @@ deploy {
         // Built in artifact to deploy arbitrary files to the roboRIO.
         fileTreeArtifact('frcStaticFileDeploy') {
             // The directory below is the local directory to deploy
-            files = fileTree(dir: 'src/deploy')
+            files = fileTree(dir: 'src/main/deploy')
             // Deploy to RoboRIO target, into /home/lvuser/deploy
             targets << "roborio"
             directory = '/home/lvuser/deploy'
@@ -53,13 +53,13 @@ model {
 
             sources.cpp {
                 source {
-                    srcDir 'src/cpp'
+                    srcDir 'src/main/cpp'
                     include '**/*.cpp', '**/*.cc'
                 }
                 exportedHeaders {
-                    srcDir 'src/include'
+                    srcDir 'src/main/include'
                     if (includeSrcInIncludeRoot) {
-                        srcDir 'src/cpp'
+                        srcDir 'src/main/cpp'
                     }
                 }
             }

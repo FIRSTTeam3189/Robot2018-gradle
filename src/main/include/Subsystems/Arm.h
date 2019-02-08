@@ -2,11 +2,11 @@
 #define Arm_H
 //#define ONE_PORT
 
-#include <Commands/PIDSubsystem.h>
+#include <frc/Commands/PIDSubsystem.h>
 #include <ctre/Phoenix.h>
-#include <SmartDashboard/SmartDashboard.h>
-#include <AnalogPotentiometer.h>
-#include <AnalogInput.h>
+#include <frc/SmartDashboard/SmartDashboard.h>
+#include <frc/AnalogPotentiometer.h>
+#include <frc/AnalogInput.h>
 #include <deque>
 #include "Utils/Piston.h"
 #include "RobotMap.h"

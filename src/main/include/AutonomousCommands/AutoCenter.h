@@ -1,7 +1,7 @@
 #ifndef AutoCenter_H
 #define AutoCenter_H
 
-#include <Commands/CommandGroup.h>
+#include <frc/Commands/CommandGroup.h>
 
 class AutoCenter : public frc::CommandGroup {
 public:

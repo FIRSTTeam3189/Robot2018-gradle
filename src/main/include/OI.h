@@ -1,8 +1,8 @@
 #ifndef OI_H_
 #define OI_H_
 
-#include <Buttons/JoystickButton.h>
-#include <Joystick.h>
+#include <frc/Buttons/JoystickButton.h>
+#include <frc/Joystick.h>
 
 class OI {
 public:

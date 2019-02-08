@@ -1,10 +1,10 @@
 #ifndef Claw_H
 #define Claw_H
 
-#include <Commands/Subsystem.h>
+#include <frc/Commands/Subsystem.h>
 #include"Utils/Piston.h"
 #include <ctre/Phoenix.h>
-#include "DigitalInput.h"
+#include <frc/DigitalInput.h>
 
 using CANTalon = ctre::phoenix::motorcontrol::can::TalonSRX;
 using ControlMode = ctre::phoenix::motorcontrol::ControlMode;

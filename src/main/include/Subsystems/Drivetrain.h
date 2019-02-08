@@ -1,12 +1,12 @@
 #ifndef DriveTrain_H
 #define DriveTrain_H
 
-#include <AnalogGyro.h>
-#include <AnalogInput.h>
-#include <AnalogPotentiometer.h>
-#include <Commands/Subsystem.h>
-#include <Encoder.h>
-#include <RobotDrive.h>
+#include <frc/AnalogGyro.h>
+#include <frc/AnalogInput.h>
+#include <frc/AnalogPotentiometer.h>
+#include <frc/Commands/Subsystem.h>
+#include <frc/Encoder.h>
+#include <frc/RobotDrive.h>
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
 #include "Utils/Piston.h"
