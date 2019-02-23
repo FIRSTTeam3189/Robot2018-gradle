@@ -82,7 +82,7 @@ void OI::InitilizeOI(){
 	copilot_8->WhenPressed(new ShoulderPIDGoto(TREX_ARM_MIDDLE));
 	copilot_9->WhenPressed(new ShoulderPIDGoto(TREX_ARM_HIGH));
 	copilot_10->WhenPressed(new ShoulderPIDGoto(TREX_ARM_START));
-	copilot_11->WhileHeld(new WinchJoystickControl());
+	copilot_11->WhileHeld(new JoystickArmControl());
 }
 bool OI::GetRight1Button(){
 return	left_1->Get();

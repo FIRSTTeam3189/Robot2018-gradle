@@ -7,8 +7,9 @@ ShoulderPIDGoto::ShoulderPIDGoto(double amount) {
 
 // Called just before this Command runs the first time
 void ShoulderPIDGoto::Initialize() {
-	arm->Enable();
-	arm->SetSetpoint(amount);
+	//arm->Enable();
+	// arm->SetSetpoint(amount);
+	arm->GotoPosition(amount);
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -23,11 +24,13 @@ bool ShoulderPIDGoto::IsFinished() {
 
 // Called once after isFinished returns true
 void ShoulderPIDGoto::End() {
-	arm->Disable();
+	// arm->Disable();
+	arm->ControlShoulder(0);
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ShoulderPIDGoto::Interrupted() {
-	arm->Disable();
+	// arm->Disable();
+	arm->ControlShoulder(0);
 }
